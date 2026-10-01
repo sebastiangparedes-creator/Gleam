@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Baloo_2, DM_Sans, Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { Analytics } from "@/components/Analytics";
 import { Header } from "@/components/Header";
 import { ToastProvider } from "@/components/toast/ToastProvider";
 import "./globals.css";
@@ -90,6 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MX4WX6S9');`}
         </Script>
+        <Analytics />
         <ToastProvider>
           <Header />
           <main className="pt-16 md:pt-[4.5rem]">{children}</main>
