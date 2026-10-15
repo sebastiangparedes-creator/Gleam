@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import { CheckoutLink } from "@/components/analytics/CheckoutLink";
+import { PricingViewTracker } from "@/components/analytics/PricingViewTracker";
 
 
 
@@ -110,6 +111,7 @@ export function PricingSection() {
       className="relative scroll-mt-24 overflow-x-hidden bg-[#2A2A2A] px-4 py-6 font-helvetica-neue-regular md:scroll-mt-28 md:px-8 md:py-10 lg:py-4"
       aria-labelledby="pricing-tagline"
     >
+      <PricingViewTracker targetId="become-a-member" />
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="relative isolate mx-auto w-full max-w-6xl px-2 md:px-4">
           <div className="relative mb-12 grid w-full place-items-center sm:mt-7  lg:mt-0">
@@ -151,12 +153,11 @@ export function PricingSection() {
               
             </div>
 
-            <Link
-              href="/locations"
+            <CheckoutLink
               className="mt-4 inline-flex w-[9.375rem] lg:w-[17.375rem] md:w-[17.375rem] items-center justify-start gap-2 rounded-xl bg-[#FFF86B] py-3 text-center text-base pl-[1.2rem] pr-[0.5rem] lg:px-3 md:px-2 font-bold tracking-[0.02em] text-[#000000] transition-opacity hover:opacity-90 sm:py-3.5 sm:text-[17px] lg:py-3.5 lg:text-[18px]"
             >
               Get Started <span aria-hidden>→</span>
-            </Link>
+            </CheckoutLink>
 
             <div className="mt-6 mb-1 h-px w-full bg-white/10" />
 

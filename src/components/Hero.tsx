@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { CheckoutLink } from "@/components/analytics/CheckoutLink";
 import { HeroScrollRotateImage } from "@/components/HeroScrollRotateImage";
 
 /** Keep in sync with `homeHeaderBackground` in `Header.tsx` if you change this gradient. */
@@ -28,12 +27,11 @@ export function Hero() {
                 <br />
                 across Los Angeles
               </h1>
-              <Link
-                href="/locations"
+              <CheckoutLink
                 className="motion-safe:animate-slide-in-ltr motion-safe:[animation-delay:320ms] mt-2 inline-flex rounded-lg bg-[#FFF86B] px-2.5 py-1.5 text-[0.7rem] font-bold text-black tracking-[0.03em] shadow-sm transition-opacity hover:opacity-90 sm:mt-4 sm:rounded-[12px] sm:px-4 sm:py-2.5 sm:text-[0.8125rem] sm:tracking-[0.05em] md:mt-6 md:rounded-[14px] md:px-8 md:py-3 md:text-base md:tracking-[0.07em] lg:mt-8"
               >
                 Get Started – $297/year
-              </Link>
+              </CheckoutLink>
               <p className="motion-safe:animate-slide-in-ltr motion-safe:[animation-delay:480ms] mt-2 flex flex-col items-start gap-y-0.5 text-[0.625rem] font-bold leading-snug text-black sm:mt-4 sm:gap-y-1 sm:text-[0.75rem] md:mt-6 md:gap-y-1.5 md:text-[0.9375rem] lg:mt-8 lg:ml-[27px] lg:text-base">
                 <span className="whitespace-nowrap">✓ Unlimited Cleanings</span>
                 <span className="whitespace-nowrap">✓ Unlimited X-Rays</span>

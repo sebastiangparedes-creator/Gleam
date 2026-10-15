@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
+import { CheckoutLink } from "@/components/analytics/CheckoutLink";
 
 /** Homepage header background on `/` — applied at `md` breakpoint and above (tablet / desktop). */
 const homeHeaderBackground =
@@ -204,14 +205,13 @@ export function Header({
             ))}
           </nav>
 
-          <Link
-            href="/locations"
+          <CheckoutLink
             className={`hidden rounded-[12px] px-5 py-2.5 text-base text-[21px] font-bold text-neutral-900 shadow-sm transition-opacity hover:opacity-90 lg:inline-flex ${
               useWhiteBg ? "border-2 border-black bg-white" : "bg-[#FFF86B]"
             }`}
           >
             Become a Member
-          </Link>
+          </CheckoutLink>
 
           <button
             type="button"
@@ -247,15 +247,14 @@ export function Header({
                 {label}
               </Link>
             ))}
-            <Link
-              href="/locations"
+            <CheckoutLink
               onClick={() => setMenuOpen(false)}
               className={`mt-2 rounded-[12px] px-4 py-3.5 text-center text-base font-bold text-neutral-900 shadow-sm transition-opacity hover:opacity-90 sm:mt-3 ${
                 useWhiteBg ? "border-2 border-black bg-white" : "bg-[#FFF86B]"
               }`}
             >
               Become a Member
-            </Link>
+            </CheckoutLink>
           </nav>
         </div>
       </div>

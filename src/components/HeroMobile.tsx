@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { CheckoutLink } from "@/components/analytics/CheckoutLink";
 import { LocationMarqueeBar } from "@/components/LocationMarqueeBar";
 
 const heroMobileBackground =
@@ -29,12 +29,11 @@ export function HeroMobile() {
               across Los Angeles
             </h1>
           </div>
-          <Link
-            href="/locations"
+          <CheckoutLink
             className="motion-safe:animate-slide-in-ltr motion-safe:[animation-delay:320ms] inline-flex rounded-full bg-white px-[clamp(1rem,4.5vw,1.75rem)] py-[clamp(0.5rem,1.65vh,0.875rem)] text-[clamp(0.8125rem,2vh,1rem)] font-bold text-black tracking-wide shadow-md transition-opacity hover:opacity-90"
           >
             Get Started – $297/year
-          </Link>
+          </CheckoutLink>
           <div className="motion-safe:animate-slide-in-ltr motion-safe:[animation-delay:480ms] flex justify-center">
             <div className="flex flex-col items-start gap-y-[clamp(0.375rem,1.35vh,0.75rem)] text-[clamp(0.9375rem,2.15vh,1.0625rem)] font-bold leading-[1rem] text-black">
               <span className="flex items-center gap-[clamp(0.375rem,1.1vh,0.625rem)] whitespace-nowrap">
